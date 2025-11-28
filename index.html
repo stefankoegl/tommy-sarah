@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Sarah & Thomas — Hochzeit • 5. September 2026</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Great+Vibes&family=Libre+Franklin:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg: #F6F2EC;         /* creme */
+    --text: #7F6E75;       /* dunkel-mauve/grey */
+    --accent: #BDA8AE;     /* mauve */
+    --muted: #E9E4DF;
+    --max-width: 980px;
+  }
+
+  /* Reset + base */
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family: "Libre Franklin", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background:var(--bg);
+    color:var(--text);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    line-height:1.5;
+  }
+  a{color:var(--accent); text-decoration:none}
+  .container{
+    max-width:var(--max-width);
+    margin:0 auto;
+    padding:48px 24px;
+  }
+
+  /* Hero */
+  .hero{
+    text-align:center;
+    padding:56px 0 40px;
+  }
+  .save{
+    font-family: "Josefin Sans", sans-serif;
+    font-weight:300;
+    letter-spacing:0.16em;
+    color:var(--accent);
+    font-size:clamp(22px,4vw,48px);
+    margin:0 0 8px;
+  }
+  .hero-subscript{
+    font-family: "Great Vibes", cursive;
+    font-size:20px;
+    color:var(--text);
+    margin-bottom:6px;
+    display:block;
+  }
+  .date{
+    font-family: "Josefin Sans", sans-serif;
+    font-weight:300;
+    font-size:18px;
+    color:var(--text);
+    margin-bottom:22px;
+  }
+  .names{
+    font-family: "Josefin Sans", sans-serif;
+    font-size:clamp(38px,7vw,84px);
+    font-weight:300;
+    letter-spacing:0.06em;
+    color:var(--text);
+    margin:10px 0 6px;
+  }
+  .lead{
+    max-width:700px;
+    margin:18px auto 0;
+    color:var(--text);
+    opacity:0.95;
+    font-size:16px;
+  }
+
+  /* Section styling */
+  section{
+    padding:36px 0;
+    border-top:1px solid var(--muted);
+  }
+  h2{
+    font-family: "Josefin Sans", sans-serif;
+    font-weight:300;
+    letter-spacing:0.12em;
+    font-size:18px;
+    margin:0 0 18px;
+    color:var(--accent);
+  }
+  .card{
+    background:transparent;
+    padding:18px;
+    border-radius:8px;
+    box-shadow:none;
+  }
+
+  /* Grid for details */
+  .grid{
+    display:grid;
+    gap:18px;
+    grid-template-columns:repeat(2,1fr);
+  }
+  @media (max-width:760px){
+    .grid{grid-template-columns:1fr}
+    .names{font-size:46px}
+  }
+
+  /* RSVP form */
+  .rsvp-form{
+    max-width:640px;
+    margin:0 auto;
+  }
+  .field{
+    display:flex;
+    gap:12px;
+    margin-bottom:12px;
+  }
+  .field input[type="text"], .field input[type="email"], .field textarea, select {
+    flex:1;
+    padding:10px 12px;
+    border:1px solid var(--muted);
+    border-radius:6px;
+    background:transparent;
+    color:var(--text);
+    font-size:15px;
+    outline:none;
+  }
+  .field textarea{min-height:120px; resize:vertical}
+  .btn{
+    display:inline-block;
+    background:var(--accent);
+    color: white;
+    border-radius:8px;
+    padding:10px 16px;
+    font-weight:600;
+    border:0;
+    cursor:pointer;
+    transition:opacity .18s ease;
+  }
+  .btn:active{opacity:0.85}
+
+  /* Gallery */
+  .gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:8px;
+  }
+  .gallery img{width:100%; height:160px; object-fit:cover; border-radius:6px}
+  @media (max-width:760px){ .gallery{grid-template-columns:repeat(2,1fr)} .gallery img{height:120px} }
+
+  footer{
+    padding:24px 0 60px;
+    text-align:center;
+    color:var(--text);
+    opacity:0.9;
+  }
+
+  /* small helpers */
+  .muted{color:var(--text); opacity:0.8; font-size:15px}
+  .center{text-align:center}
+</style>
+</head>
+<body>
+
+<main class="container">
+  <!-- HERO -->
+  <header class="hero" role="banner" aria-label="Save the Date">
+    <div class="save">SAVE</div>
+    <span class="hero-subscript">the</span>
+    <div class="save">DATE</div>
+
+    <div class="date">5. September 2026 — Wiener Weinberge</div>
+
+    <h1 class="names" aria-label="Sarah & Thomas">SARAH & THOMAS</h1>
+
+    <p class="lead center">Wir laden euch herzlich zu unserer Hochzeit am <strong>5. September 2026</strong> in den Wiener Weinbergen ein. Alle weiteren Details lassen wir euch zeitnah zukommen. Wir würden uns sehr freuen, wenn ihr kommt!</p>
+  </header>
+
+  <!-- Details -->
+  <section id="details" aria-labelledby="details-title">
+    <h2 id="details-title">Weitere Details</h2>
+    <div class="card">
+      <div class="grid">
+        <div>
+          <strong>Zeremonie</strong>
+          <p class="muted">15:00 — Freie Trauung im Weinbergsgarten</p>
+        </div>
+        <div>
+          <strong>Feier</strong>
+          <p class="muted">ab 18:00 — Abendessen und Tanz im Weingut XY</p>
+        </div>
+      </div>
+      <p class="muted" style="margin-top:12px">Genauere Infos zu Anfahrt, Unterkunft und Tagesablauf folgen mit der offiziellen Einladung.</p>
+    </div>
+  </section>
+
+  <!-- Anfahrt / Map -->
+  <section id="anfahrt" aria-labelledby="anfahrt-title">
+    <h2 id="anfahrt-title">Anfahrt</h2>
+    <p class="muted">Die Feier findet in den Wiener Weinbergen statt. Parkmöglichkeiten sind vor Ort vorhanden. Unten findest du eine Karte und Routenoptionen.</p>
+
+    <!-- Map placeholder — ersetzt durch Google Maps Embed -->
+    <div style="margin-top:12px; border-radius:8px; overflow:hidden; border:1px solid var(--muted)">
+      <!-- Replace the iframe src with your Google Maps embed link -->
+      <iframe title="Karte" src="https://www.google.com/maps/embed?pb=" width="100%" height="320" style="border:0" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- Zeitplan -->
+  <section id="programm" aria-labelledby="programm-title">
+    <h2 id="programm-title">Tagesablauf (vorläufig)</h2>
+    <div class="grid">
+      <div>
+        <strong>14:30</strong>
+        <p class="muted">Begrüßungsgetränk</p>
+      </div>
+      <div>
+        <strong>15:00</strong>
+        <p class="muted">Trauung</p>
+      </div>
+      <div>
+        <strong>17:00</strong>
+        <p class="muted">Sektempfang</p>
+      </div>
+      <div>
+        <strong>18:30</strong>
+        <p class="muted">Abendessen & Reden</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section id="rsvp" aria-labelledby="rsvp-title">
+    <h2 id="rsvp-title">RSVP</h2>
+    <p class="muted">Bitte sag uns bis spätestens <strong>15. Juli 2026</strong> Bescheid, ob du kommen kannst.</p>
+
+    <form class="rsvp-form" id="rsvp-form" onsubmit="event.preventDefault(); alert('Danke — dies ist ein Demo-Formular. Verbinde hier dein Backend oder ein Formular-Tool.');">
+      <div class="field">
+        <input required type="text" name="name" placeholder="Dein Name">
+        <input type="email" name="email" placeholder="E-Mail (optional)">
+      </div>
+
+      <div class="field">
+        <select name="attend" required>
+          <option value="">Bitte wählen</option>
+          <option value="yes">Ich komme</option>
+          <option value="no">Ich kann leider nicht</option>
+        </select>
+        <input type="text" name="guests" placeholder="Gäste (z. B. +1)">
+      </div>
+
+      <div class="field">
+        <textarea name="notes" placeholder="Diätwünsche / Nachricht (optional)"></textarea>
+      </div>
+
+      <button class="btn" type="submit">Antwort senden</button>
+    </form>
+  </section>
+
+  <!-- Galerie -->
+  <section id="gallery" aria-labelledby="gallery-title">
+    <h2 id="gallery-title">Galerie</h2>
+    <p class="muted">Ein paar Eindrücke — wir ergänzen hier später persönliche Fotos.</p>
+    <div class="gallery" aria-hidden="false">
+      <!-- Platzhalter-Bilder: ersetze src mit echten Bildern -->
+      <img src="https://via.placeholder.com/600x400.png?text=Foto+1" alt="Foto 1">
+      <img src="https://via.placeholder.com/600x400.png?text=Foto+2" alt="Foto 2">
+      <img src="https://via.placeholder.com/600x400.png?text=Foto+3" alt="Foto 3">
+    </div>
+  </section>
+
+  <!-- Registry / Geschenke -->
+  <section id="registry" aria-labelledby="registry-title">
+    <h2 id="registry-title">Geschenke</h2>
+    <p class="muted">Eure Anwesenheit ist das schönste Geschenk. Wenn ihr uns trotzdem etwas schenken möchtet, findet ihr hier unsere Wunschliste:</p>
+    <p><a href="#" aria-label="Link zur Wunschliste">Zur Wunschliste &amp; Registry</a></p>
+  </section>
+
+  <footer>
+    <p class="muted">Bei Fragen: <a href="mailto:sarah-thomas@example.com">sarah-thomas@example.com</a></p>
+    <p style="margin-top:12px; font-size:13px; opacity:0.8">© Sarah & Thomas — 2026</p>
+  </footer>
+</main>
+
+</body>
+</html>
+

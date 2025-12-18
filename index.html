@@ -91,7 +91,35 @@
 
     <!-- RSVP section removed -->
 
-  <!-- Galerie section removed -->
+  <!-- Foto Upload section -->
+  <section id="foto-upload" aria-labelledby="foto-upload-title">
+    <h2 id="foto-upload-title">Foto Upload</h2>
+    <button id="upload_widget_opener" type="button">Foto hochladen mit Cloudinary</button>
+    <p class="muted" style="margin-top:12px">Klicke auf den Button, um ein Foto direkt mit dem Cloudinary Widget hochzuladen.</p>
+  </section>
+
+  <!-- Cloudinary Upload Widget Script -->
+  <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    document.getElementById('upload_widget_opener').addEventListener('click', function() {
+      cloudinary.openUploadWidget({
+        cloudName: 'dvvlbkiz7', 
+        uploadPreset: 'sarah-tommy',
+        sources: ['local', 'url', 'camera'],
+        multiple: false,
+        cropping: false,
+        folder: 'hochzeit',
+        maxFileSize: 5000000,
+        clientAllowedFormats: ['jpg', 'png', 'jpeg'],
+        resourceType: 'image',
+        language: 'de',
+      }, (error, result) => {
+        if (!error && result && result.event === "success") {
+          alert('Upload erfolgreich! Bild-URL: ' + result.info.secure_url);
+        }
+      });
+    });
+  </script>
 
   <!-- Registry / Geschenke -->
   <section id="registry" aria-labelledby="registry-title">

@@ -39,6 +39,37 @@ a{color:var(--accent); text-decoration:none}
   font-size:clamp(22px,4vw,48px);
   margin:0 0 8px;
 }
+
+/* Dreamy image style */
+.hero-image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0 16px;
+}
+.dreamy-image {
+  max-width: 340px;
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(189,168,174,0.18);
+  filter:
+    brightness(1.08)
+    contrast(0.85)
+    saturate(0.7)
+    sepia(0.18)
+    drop-shadow(0 2px 16px rgba(189,168,174,0.12));
+  opacity: 0.93;
+  transition: filter 0.3s;
+}
+.dreamy-image:hover {
+  filter:
+    blur(0.5px)
+    brightness(1.12)
+    contrast(0.95)
+    saturate(0.8)
+    sepia(0.12)
+    drop-shadow(0 4px 24px rgba(189,168,174,0.18));
+  opacity: 1;
+}
 .hero-subscript{
   font-family: "Great Vibes", cursive;
   font-size:20px;

@@ -42,14 +42,15 @@ a{color:var(--accent); text-decoration:none}
 
 /* Dreamy image style */
 .hero-image-wrapper {
-  display: flex;
-  justify-content: center;
-  margin: 48px 0 32px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-top: 48px;
+  margin-bottom: 32px;
 }
 .dreamy-image {
-  max-width: 900px;
   width: 100%;
-  border-radius: 24px;
+  height: 600px;
+  object-fit: cover;
   box-shadow: 0 8px 32px 0 rgba(189,168,174,0.18);
   filter:
     brightness(1.08)

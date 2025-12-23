@@ -45,7 +45,7 @@ a{color:var(--accent); text-decoration:none}
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-top: 48px;
-  margin-bottom: 32px;
+  margin-bottom: 64px;
 }
 .dreamy-image {
   width: 100%;

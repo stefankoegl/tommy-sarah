@@ -39,6 +39,17 @@
   <!-- HERO -->
   <header class="hero" role="banner" aria-label="Sarah & Thomas">
     <h1 class="names" aria-label="Sarah & Thomas">SARAH & THOMAS</h1>
+    <!-- Countdown Widget -->
+    <div id="countdown-widget" class="countdown-widget" aria-label="Countdown zur Hochzeit">
+      <div class="countdown-label">Noch</div>
+      <div class="countdown-values">
+        <span id="cd-days">0</span> Tage
+        <span id="cd-hours">0</span> Std
+        <span id="cd-minutes">0</span> Min
+        <span id="cd-seconds">0</span> Sek
+      </div>
+      <div class="countdown-event">bis zur Hochzeit am 5. September 2026, 12:00 CEST</div>
+    </div>
 
     <div class="hero-image-wrapper">
       <img src="hochzeit.jpg" alt="Sarah und Thomas" class="dreamy-image" />
@@ -188,5 +199,28 @@ sparen.</p>
 </main>
 
 </body>
+</body>
+<script>
+// Countdown to Sep 5, 2026, 12:00 CEST
+function updateCountdown() {
+  const target = new Date('2026-09-05T12:00:00+02:00');
+  const now = new Date();
+  const diff = target - now;
+  if (diff <= 0) {
+    document.getElementById('countdown-widget').innerHTML = '<div class="countdown-label">Der große Tag ist da!</div>';
+    return;
+  }
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((diff / (1000 * 60)) % 60);
+  const seconds = Math.floor((diff / 1000) % 60);
+  document.getElementById('cd-days').textContent = days;
+  document.getElementById('cd-hours').textContent = hours;
+  document.getElementById('cd-minutes').textContent = minutes;
+  document.getElementById('cd-seconds').textContent = seconds;
+}
+setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
 </html>
 

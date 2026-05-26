@@ -36,6 +36,51 @@
 </head>
 <body>
 
+<!-- Security gate -->
+<div id="security-gate">
+  <div class="gate-card">
+    <h1>SARAH & THOMAS</h1>
+    <span class="gate-subtitle">5. September 2026</span>
+    <p>Aus welchem Bundesland kommt die Braut?</p>
+    <input
+      type="text"
+      id="gate-answer"
+      class="gate-input"
+      placeholder="Antwort eingeben…"
+      autocomplete="off"
+    />
+    <br>
+    <button class="gate-btn" onclick="checkGate()">Weiter</button>
+    <p class="gate-error" id="gate-error"></p>
+  </div>
+</div>
+
+<script>
+(function () {
+  if (sessionStorage.getItem('gate_passed') === '1') {
+    document.getElementById('security-gate').style.display = 'none';
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+    var input = document.getElementById('gate-answer');
+    if (input) input.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') checkGate();
+    });
+  });
+})();
+
+function checkGate() {
+  var answer = (document.getElementById('gate-answer').value || '').trim().toLowerCase();
+  if (btoa(answer) === 'YmF5ZXJu') {
+    sessionStorage.setItem('gate_passed', '1');
+    document.getElementById('security-gate').style.display = 'none';
+  } else {
+    document.getElementById('gate-error').textContent = 'Leider falsch — versuch es nochmal!';
+    document.getElementById('gate-answer').value = '';
+    document.getElementById('gate-answer').focus();
+  }
+}
+</script>
+
 <main class="container">
   <!-- HERO -->
   <header class="hero" role="banner" aria-label="Sarah & Thomas">
